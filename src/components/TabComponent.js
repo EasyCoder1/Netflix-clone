@@ -4,6 +4,8 @@ import TabDoor from './tabs_nav/TabDoor';
 import TabDevices from './tabs_nav/TabsDevices';
 import TabPrice from './tabs_nav/TabPrice';
 import '../css/TabsNav.css';
+import TabContentOe from './TabContentOne';
+import TabContentOne from './TabContentOne';
 
 class TabComponent extends Component {
     state={
@@ -17,7 +19,7 @@ class TabComponent extends Component {
                     <TabList className="tab-nav-container">
                         <Tab className={`${this.state.tabIndex===0 ? '.tab-selected active' : null}`}>
                             <TabDoor/>
-                        <p><strong>No Commitments<br />
+                        <p style={{marginBottom:'1.875rem'}}><strong>No Commitments<br />
                         Cancel online at anytime
                         </strong></p>
                         </Tab>
@@ -31,6 +33,12 @@ class TabComponent extends Component {
                         <p style={{marginTop: '-0.3125rem'}}><strong>Pick your price</strong></p>
                         </Tab>
                     </TabList>
+                {/* Tab content */}
+
+                <TabPanel>
+                    <TabContentOne />
+
+                </TabPanel>
                 </Tabs>
                 
             </div>
